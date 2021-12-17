@@ -1,20 +1,41 @@
 import React, { useState } from 'react';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
+import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import { auth } from "../../../config/firebase";
+import { loginUser } from '../../../redux/ActionCreators/AuthAuctionCreator';
 // import { toast } from "react-toastify";
 
 const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const dispatch = useDispatch();
+    const history = useHistory();
 
 
     const handleSubmit = e => {
         e.preventDefault();
 
-        if (!email || !password) return toast.warn("Please fill up all the fields", {theme:'dark'});
-        if(password.length < 4) return toast.warn("Password must be at least 4 digit!");
-        
-        console.log(email, password); 
+        if (!email || !password) return toast.warn("Please fill up all the fields", { theme: 'dark' });
+        if (password.length < 4) return toast.warn("Password must be at least 4 digit!");
+
+        console.log(email, password);
+
+        auth.signInWithEmailAndPassword(email, password)
+            .then(user => {
+                console.log(user);
+                const data = {
+                    user: user.user.providerData[0],
+                    id: user.user.uid
+                }
+                dispatch(loginUser(data));
+                toast.success("Successfully logged in!");
+                history.push("/admin/dashboard");
+            })
+            .catch(err => {
+                toast.error("invalid email or password!")
+            })
 
     }
     return (
