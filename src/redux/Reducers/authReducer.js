@@ -1,4 +1,4 @@
-
+import * as types from "../types/AuthTypes";
 
 const initialState ={
     isLoggedIn: false,
@@ -8,6 +8,12 @@ const initialState ={
 
 const authReducer = (state=initialState, {type, payload})=>{
     switch(type){
+        case types.SET_USER:
+            state = {isLoggedIn:true, user: payload.user, user_id:payload.id};
+            return state;
+        case types.RESET_USER:
+            state = initialState;
+            return state;
         default:
             return state;
     }

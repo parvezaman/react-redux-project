@@ -1,4 +1,8 @@
 import firebase from "firebase/app";
+// import firebase from 'firebase/compat/app';
+import "firebase/auth";
+// require('firebase/auth')
+
 
 const firebaseConfig = {
     apiKey: process.env.REACT_APP_API_KEY,
@@ -9,4 +13,6 @@ const firebaseConfig = {
     appId: process.env.REACT_APP_APP_ID,
   };
 
-  const firebaseInitialize = firebase.initialize(firebaseConfig);
+  const firebaseInitialize = firebase.initializeApp(firebaseConfig);
+
+  export const auth = firebaseInitialize.auth();
