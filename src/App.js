@@ -7,6 +7,7 @@ import { ToastContainer } from 'react-toastify';
 import NotFound from './Pages/NotFound/NotFound';
 import NavigationBar from './Pages/Shared/NavigationBar/NavigationBar';
 import Login from './AdminPanel/Authentication/Login/Login';
+import HireThisBook from './Pages/HomePage/HireThisBook/HireThisBook';
 
 function App() {
   return (
@@ -23,8 +24,11 @@ function App() {
         <Route path='/admin'>
           <Admin />
         </Route>
-        <Route to="/login">
+        <Route path="/login">
           <Login />
+        </Route>
+        <Route path="/hire/:id">
+          <HireThisBook/>
         </Route>
         <Route path='*'>
           <NotFound />

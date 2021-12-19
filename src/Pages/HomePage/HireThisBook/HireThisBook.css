@@ -1,0 +1,12 @@
+.address-form form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.address-form input, textarea{
+    width: 45%;
+    margin-bottom: 5px;
+}
