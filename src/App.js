@@ -8,6 +8,7 @@ import NotFound from './Pages/NotFound/NotFound';
 import NavigationBar from './Pages/Shared/NavigationBar/NavigationBar';
 import Login from './AdminPanel/Authentication/Login/Login';
 import HireThisBook from './Pages/HomePage/HireThisBook/HireThisBook';
+import Footer from './Pages/Shared/Footer/Footer';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           <NotFound />
         </Route>
       </Switch>
+      <Footer/>
     </div>
   );
 }

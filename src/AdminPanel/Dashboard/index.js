@@ -5,6 +5,7 @@ import { useRouteMatch } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
 import { auth } from '../../config/firebase';
 import { logOutUser } from '../../redux/ActionCreators/AuthAuctionCreator';
+import AllOrders from '../AllOrders/AllOrders';
 import Registration from '../Authentication/Registration/Registration';
 import NavBar from '../NavBar/NavBar';
 
@@ -27,6 +28,8 @@ const Dashboard = () => {
                     <br />
                     <button className='m-1 btn btn-danger' type='button' onClick={logout}>Logout</button>
                     <button className='m-1 btn btn-info'><Link className='text-decoration-none text-white' to="/admin/dashboard/addadmin">Add New Admin</Link></button>
+                    <br />
+                    <AllOrders/>
                 </Route>
                 <Route exact path={`${path}/addadmin`}>
                     <Registration />
