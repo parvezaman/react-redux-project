@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import { auth } from "../../../config/firebase";
 import {loginUser} from "../../../redux/ActionCreators/AuthAuctionCreator";
+import { auth } from "../../../config/firebase";
 
 const Registration = () => {
 
@@ -14,7 +14,13 @@ const Registration = () => {
     const [conformPassword, setConformPassword] = useState("");
     const dispatch = useDispatch();
     const history = useHistory();
+    const isLoggedIn = useSelector(state => state.auth.isLoggedIn);
 
+    useEffect(()=>{
+        if(!isLoggedIn){
+            history.push("/admin/login")
+        }
+    },[]);
 
     const handleSubmit = e => {
         e.preventDefault();

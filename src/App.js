@@ -4,20 +4,30 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './Pages/HomePage/Home/Home';
 import Admin from './AdminPanel';
 import { ToastContainer } from 'react-toastify';
+import NotFound from './Pages/NotFound/NotFound';
+import NavigationBar from './Pages/Shared/NavigationBar/NavigationBar';
+import Login from './AdminPanel/Authentication/Login/Login';
 
 function App() {
   return (
     <div className="App">
-      <ToastContainer/>
+      <ToastContainer />
+      <NavigationBar />
       <Switch>
         <Route exact path='/'>
-          <Home/>
+          <Home />
         </Route>
         <Route path='/home'>
-          <Home/>
+          <Home />
         </Route>
         <Route path='/admin'>
-          <Admin/>
+          <Admin />
+        </Route>
+        <Route to="/login">
+          <Login />
+        </Route>
+        <Route path='*'>
+          <NotFound />
         </Route>
       </Switch>
     </div>
