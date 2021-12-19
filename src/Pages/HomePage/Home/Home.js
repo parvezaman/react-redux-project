@@ -6,22 +6,38 @@ import "./Home.css";
 const Home = () => {
     const [allBooks, setAllBooks] = useState([]);
     const history = useHistory();
-    useEffect(()=>{
-        fetch('http://localhost:5000/allbooks')
-        .then(res => res.json())
-        .then(data => {
-            setAllBooks(data)
-            console.log(data)
-        })
-    },[]);
+    useEffect(() => {
+        fetch('https://fierce-sea-38013.herokuapp.com/allbooks')
+            .then(res => res.json())
+            .then(data => {
+                setAllBooks(data)
+                console.log(data)
+            })
+    }, []);
 
-    const handleHireThisBook = id =>{
+    const handleHireThisBook = id => {
         const url = `/hire/${id}`;
         history.push(url);
     }
     return (
         <div>
-            <h1>Welcome to the Home Page</h1>
+            <div className='home-land'>
+                <h3>This is a book renting website. </h3>
+                <br />
+                <h1>Innal Hamdalillah!</h1>
+                <h3>Wassalatu Assalamu 'Ala Rasulillah</h3>
+                <br />
+                <h5>Look! I got for example 100 books. I do not read all these books at once! So i decided to help out other brothers and sisters throughout the world with providing books to read!</h5>
+                <br />
+                <h5>What you just need to do is to choose which book you want to read and just provide your delivary address. Courier  service of course</h5>
+
+                <br />
+                <h5>You will need to provide the Courier Charge. You will be given 7 days to finish the book. Afterwards you will return the book on my address via Courier service again and you need to pay the charge. If you need extra time to read the book, please inform me via email</h5>
+                <br />
+
+                <h2>You do not have to pay any charge for the book hiring! Just the Courier service charge!!!</h2>
+
+            </div>
             <Container>
                 {
                     allBooks.map(book => <div key={book._id} className='d-lg-flex justify-content-around align-items-center'>
@@ -42,7 +58,7 @@ const Home = () => {
 
                             <br />
 
-                            <button onClick={()=>handleHireThisBook(book._id)} className='btn btn-primary'>Hire this book</button>
+                            <button onClick={() => handleHireThisBook(book._id)} className='btn btn-primary'>Hire this book</button>
                         </div>
                     </div>)
                 }

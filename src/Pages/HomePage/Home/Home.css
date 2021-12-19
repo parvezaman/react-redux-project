@@ -1,3 +1,19 @@
 .book-image{
     width: 200px;
 }
+.home-land{
+    background-image: url(ashkan-forouzani-7blIFp0kFP4-unsplash.jpg);
+    padding: 3%;
+}
+.home-land h3{
+    color: goldenrod;
+}
+.home-land h1{
+    color: rgb(209, 130, 12);
+}
+.home-land h5{
+    color: honeydew;
+}
+.home-land h2{
+    color: crimson;
+}

@@ -14,7 +14,7 @@ const HireThisBook = () => {
 
     const [book, setBook] = useState({});
     useEffect(() => {
-        fetch(`http://localhost:5000/allbooks/${id}`)
+        fetch(`https://fierce-sea-38013.herokuapp.com/allbooks/${id}`)
             .then(res => res.json())
             .then(data => setBook(data))
     }, []);
@@ -23,7 +23,7 @@ const HireThisBook = () => {
     const onSubmit = data => {
         console.log(data);
 
-        axios.post('http://localhost:5000/testshipping', data)
+        axios.post('https://fierce-sea-38013.herokuapp.com/testshipping', data)
         .then(res => {
             console.log(res);
 
