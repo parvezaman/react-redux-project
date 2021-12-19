@@ -1,70 +1,23 @@
-# Getting Started with Create React App
+# In this Assignment, I tried with ***React-Redux***
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I developed a site that is dedicated to hiring books. Suppose, I got 100 books. I do not read all these books at once! So I decided to help out other brothers and sisters throughout the world by providing books to read!
+What you just need to do is to choose which book you want to read and just provide your delivery address. Courier service of course.
+You will need to provide the Courier Charge. You will be given 7 days to finish the book. Afterward, you will return the book to my address via Courier service again and you need to pay the charge. If you need extra time to read the book, please inform me via email.
+### You do not have to pay any charge for the book hiring! Just the Courier service charge!!!
 
-## Available Scripts
+## Features of this website:
+* Fully Responsive to all devices
+* React-Redux is used
+* Only logged in users can access the admin panel
+* If a normal user tries to access the admin panel, he will be redirected to the login page
+* Only an admin can add another admin
+* Anyone can order books, No need to create an account
+* Information of books are loading from MongoDB and User Address also will be sent to the MongoDB
 
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Necessary Links:
+* Feature Doc Link: https://docs.google.com/document/d/1ciQmX-0cMUIxZ8O-SiBAblkOMYFXaSIbr-IcS4_iXoM/edit?usp=sharing
+* GitHub (Client Side): https://github.com/parvezaman/react-redux-project
+* GitHub (Server Side): https://github.com/parvezaman/react-redux-project-server
+* Firebase (Live Site 1): https://react-redux-project-bb339.web.app/
+* Firebase (Live Site 2): https://react-redux-project-bb339.firebaseapp.com/
+* Heroku Server: https://fierce-sea-38013.herokuapp.com
